@@ -1,0 +1,1290 @@
+/* Genel Stiller */
+:root {
+    --primary-color: #0072ce;
+    --secondary-color: #004990;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+    --dark-gray: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark-gray);
+}
+
+/* Navbar Stilleri */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-menu li a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: var(--primary-color);
+}
+
+.login-btn {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem !important;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-gray);
+    margin: 2px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section Stilleri */
+.hero {
+    background: linear-gradient(rgba(0,114,206,0.8), rgba(0,73,144,0.8)), url('https://via.placeholder.com/1920x1080') center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 70px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Hizmetler Bölümü Stilleri */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.service-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Kampanyalar Bölümü Stilleri */
+.campaigns {
+    background-color: var(--gray);
+    padding: 4rem 2rem;
+}
+
+.campaigns h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.campaign-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+}
+
+.campaign-card {
+    flex: 0 0 300px;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+}
+
+.campaign-card button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Uygulama Tanıtımı Stilleri */
+.app-promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.app-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.app-image {
+    flex: 1;
+    text-align: center;
+}
+
+.app-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* İletişim Formu Stilleri */
+.contact {
+    background-color: var(--gray);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer Stilleri */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .app-promo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .app-buttons {
+        justify-content: center;
+    }
+}
+
+/* Bireysel Sayfa Stilleri */
+.bireysel-hero {
+    background: linear-gradient(rgba(0,114,206,0.9), rgba(0,73,144,0.9)), url('https://via.placeholder.com/1920x1080') center/cover;
+    height: 50vh;
+}
+
+.hizmet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hizmet-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.hizmet-card:hover {
+    transform: translateY(-5px);
+}
+
+.hizmet-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hizmet-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.hizmet-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Avantajlar Bölümü */
+.avantajlar {
+    background-color: var(--gray);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.avantajlar h2 {
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+}
+
+.avantaj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.avantaj-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.avantaj-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* SSS Bölümü */
+.sss {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sss h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sss-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.sss-soru {
+    padding: 1rem;
+    background-color: var(--white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sss-soru h3 {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+}
+
+.sss-cevap {
+    padding: 1rem;
+    background-color: var(--gray);
+    display: none;
+}
+
+.sss-item.active .sss-cevap {
+    display: block;
+}
+
+.sss-item.active .sss-soru i {
+    transform: rotate(180deg);
+}
+
+/* Aktif Menü Stili */
+.nav-menu li a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Kurumsal Sayfa Stilleri */
+.kurumsal-hero {
+    background: linear-gradient(rgba(0,114,206,0.9), rgba(0,73,144,0.9)), url('https://via.placeholder.com/1920x1080') center/cover;
+    height: 50vh;
+}
+
+.kurumsal-hizmetler {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+}
+
+.kurumsal-avantajlar {
+    background-color: var(--gray);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.kurumsal-avantajlar h2 {
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+}
+
+/* Referanslar Bölümü */
+.referanslar {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.referanslar h2 {
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+}
+
+.referans-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.referans-card {
+    flex: 0 0 300px;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+}
+
+.referans-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.referans-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.referans-card p {
+    font-style: italic;
+    color: var(--dark-gray);
+}
+
+/* Kurumsal İletişim Formu */
+.kurumsal-iletisim {
+    background-color: var(--gray);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.kurumsal-iletisim h2 {
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+}
+
+.iletisim-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.kurumsal-iletisim .contact-form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* İnternet Sayfa Stilleri */
+.internet-hero {
+    background: linear-gradient(rgba(0,114,206,0.9), rgba(0,73,144,0.9)), url('https://via.placeholder.com/1920x1080') center/cover;
+    height: 50vh;
+}
+
+/* İnternet Paketleri */
+.internet-paketler {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.internet-paketler h2 {
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+}
+
+.paket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.paket-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.paket-card:hover {
+    transform: translateY(-5px);
+}
+
+.paket-card.populer {
+    border: 2px solid var(--primary-color);
+}
+
+.populer-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.paket-header {
+    margin-bottom: 2rem;
+}
+
+.paket-header h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.fiyat {
+    font-size: 2.5rem;
+    color: var(--dark-gray);
+    font-weight: bold;
+}
+
+.fiyat span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.paket-ozellikler {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.paket-ozellikler li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.paket-ozellikler i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.paket-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.paket-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Uygunluk Kontrolü */
+.uygunluk-kontrol {
+    background-color: var(--gray);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.uygunluk-kontrol h2 {
+    margin-bottom: 2rem;
+    color: var(--dark-gray);
+}
+
+.kontrol-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.kontrol-form {
+    display: flex;
+    gap: 1rem;
+}
+
+.kontrol-form input {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.kontrol-form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.kontrol-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* İnternet Avantajları */
+.internet-avantajlar {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.internet-avantajlar h2 {
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+}
+
+/* Mobil Sayfası Stilleri */
+.mobil-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600') center/cover;
+    height: 50vh;
+}
+
+.mobil-paketler {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+}
+
+.paket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.paket-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.paket-card:hover {
+    transform: translateY(-5px);
+}
+
+.paket-card.populer {
+    border: 2px solid var(--primary-color);
+}
+
+.populer-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.paket-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.paket-header h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.fiyat {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.fiyat span {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.paket-ozellikler {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.paket-ozellikler li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.paket-ozellikler i {
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.paket-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.paket-btn:hover {
+    background: var(--secondary-color);
+}
+
+.numara-tasima {
+    padding: 4rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.numara-tasima-container {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.numara-tasima-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.numara-tasima-form input {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.numara-tasima-form button {
+    padding: 1rem;
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.numara-tasima-form button:hover {
+    background: var(--light-bg);
+}
+
+.mobil-avantajlar {
+    padding: 4rem 2rem;
+    background: var(--light-bg);
+    text-align: center;
+}
+
+.avantaj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.avantaj-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avantaj-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.avantaj-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.avantaj-card p {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .paket-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .numara-tasima-form {
+        padding: 0 1rem;
+    }
+    
+    .avantaj-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TV Sayfası Stilleri */
+.tv-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600') center/cover;
+    height: 50vh;
+}
+
+.tv-paketler {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+}
+
+.tv-ozellikler {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.ozellik-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.ozellik-card {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.ozellik-card:hover {
+    transform: translateY(-5px);
+}
+
+.ozellik-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.ozellik-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.ozellik-card p {
+    color: var(--secondary-color);
+}
+
+.tv-cihazlar {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.cihaz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.cihaz-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cihaz-card:hover {
+    transform: translateY(-5px);
+}
+
+.cihaz-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.cihaz-card h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.cihaz-card p {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.cihaz-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cihaz-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .ozellik-grid,
+    .cihaz-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Kampanyalar Sayfası Stilleri */
+.kampanyalar-hero {
+    background: linear-gradient(rgba(0,114,206,0.9), rgba(0,73,144,0.9)), url('https://www.turktelekom.com.tr/assets/img/campaigns/hero-bg.jpg') center/cover;
+    height: 50vh;
+}
+
+.kampanyalar {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+}
+
+.kampanyalar h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+}
+
+.kampanya-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kampanya-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.kampanya-card:hover {
+    transform: translateY(-5px);
+}
+
+.kampanya-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+.kampanya-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.kampanya-content {
+    padding: 2rem;
+}
+
+.kampanya-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.kampanya-ozellikler {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.kampanya-ozellikler li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.kampanya-ozellikler i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.kampanya-fiyat {
+    font-size: 2rem;
+    color: var(--dark-gray);
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.kampanya-fiyat span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.kampanya-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.kampanya-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Özel Teklifler */
+.ozel-teklifler {
+    padding: 4rem 2rem;
+    background-color: var(--gray);
+    text-align: center;
+}
+
+.ozel-teklifler h2 {
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+}
+
+.teklif-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.teklif-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.teklif-card:hover {
+    transform: translateY(-5px);
+}
+
+.teklif-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.teklif-card h3 {
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+}
+
+.teklif-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.teklif-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Kampanya Takvimi */
+.kampanya-takvimi {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+}
+
+.kampanya-takvimi h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+}
+
+.takvim-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.takvim-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--gray);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.takvim-tarih {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 2rem;
+    min-width: 80px;
+}
+
+.takvim-tarih .gun {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.takvim-tarih .ay {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.takvim-icerik h3 {
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .kampanya-grid,
+    .teklif-grid,
+    .takvim-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .takvim-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .takvim-tarih {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+} 
